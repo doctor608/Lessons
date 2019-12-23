@@ -1,2 +1,4 @@
 1. Text Editor - vim.
 2. Compiler - gcc.
+3. Terminal - bash.
+4. Terminal Multiplexer - tmux.
