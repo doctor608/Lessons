@@ -1,0 +1,2 @@
+1. Text Editor - vim.
+2. Compiler - gcc.

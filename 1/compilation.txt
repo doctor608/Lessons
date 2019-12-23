@@ -1,0 +1,6 @@
+Compiling - 4 stages
+
+1. Preprocessing;
+2. Compiling;
+3. Assembling;
+4. Linking;
