@@ -1,6 +1,6 @@
-// Input 34512
-// Ouput 3  4  5  1  2
-
+/*
+ * Split a five-digit number into distinct digits.
+ */
 #include <stdio.h>
 
 int main(void)

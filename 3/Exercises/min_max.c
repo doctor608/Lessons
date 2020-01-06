@@ -1,3 +1,6 @@
+/*
+ * Calucaltes min, max and mean of three numbers.
+ */
 #include <stdio.h>
 
 int main(void)

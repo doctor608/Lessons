@@ -1,3 +1,6 @@
+/*
+ * Shows the relation between to numbers.
+ */
 #include <stdio.h>
 
 int main(void)

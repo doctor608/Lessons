@@ -1,10 +1,13 @@
+/*
+ * Float arithmetic operations.
+ */
 #include <stdio.h>
 
 int main(void)
 {
  	double a, b;
 
-	printf("Введите число a,b: ");
+	printf("Введите число a, b: ");
 
 	if (scanf("%lf %lf", &a, &b) != 2) {
 		puts("Error: 2 integer values are expected");

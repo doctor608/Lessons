@@ -1,3 +1,6 @@
+/*
+ * Prints if number is even or odd.
+ */
 #include <stdio.h>
 
 int main(void)
@@ -16,4 +19,4 @@ int main(void)
 		printf("%d is even\n", a);	
 
 	return 0;
-
+}
