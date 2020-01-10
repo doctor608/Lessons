@@ -1,5 +1,7 @@
-/*
+/* gcc -o factorial factorial.c
+ *
  * Calculates the factorial.
+ *
  */
 #include <stdio.h>
 

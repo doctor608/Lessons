@@ -1,5 +1,7 @@
-/*
+/* gcc -o average average.c
+ *
  * Prompts user for 10 grades (integers) and prints it's average.
+ *
  */
 #include <stdio.h>
 
@@ -8,7 +10,7 @@
 int main(void)
 {
 	int i, grade, total, average;
-	
+
 	i = 0;
 	total = 0;
 
@@ -18,7 +20,7 @@ int main(void)
 		total += grade;
 		++i;
 	}
-	
+
 	average = total / NUM_GRADES;
 	printf("Average is %d\n", average);
 

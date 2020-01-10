@@ -1,5 +1,7 @@
-/*
+/* gcc -o max max.c
+ *
  * Prompts user for numbers, at the end prints the maximum number received.
+ *
  */
 #include <stdio.h>
 

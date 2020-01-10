@@ -1,0 +1,4 @@
+1. Accuracy (Корректность)
+2. Надежность
+3. Simplicity
+4. Good Style

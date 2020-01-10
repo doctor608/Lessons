@@ -1,4 +1,4 @@
-/*
+/* gcc -o romb romb.c
  * 2 - 30
  *
  * 5:
@@ -7,7 +7,7 @@
  *    * *
  *   *   *
  *  *     *
- * 
+ *
  * 1. 4 spaces 1 star 1 spaces 1 star
  * 2. 3 spaces 1 star 3 spaces 1 star
  * 3. 2 spaces 1 star 5 spaces 1 star
@@ -32,7 +32,7 @@ int main(void)
 
 	printf("Enter side (%d..%d): ", MIN_SIDE, MAX_SIDE);
 	if (scanf("%d", &side) != 1) {
-		fprintf(stderr, "Error: Expected an integer value in range (%d..%d)\n", 
+		fprintf(stderr, "Error: Expected an integer value in range (%d..%d)\n",
 			MIN_SIDE, MAX_SIDE);
 		return 1;
 	}
@@ -69,7 +69,7 @@ int main(void)
 	}
 	printf("*\n");
 
-	// print the lower body 
+	// print the lower body
 	// TODO Doesnt work
 	/*
 	for (int row = 1; row < side - 1; ++row) {

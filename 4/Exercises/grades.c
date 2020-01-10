@@ -1,6 +1,8 @@
-/*
+/* gcc -o grades grades.c
+ *
  * Prompts user for grades (integers) until user enters -1,
  * and prints it's average.
+ *
  */
 #include <stdio.h>
 
@@ -11,7 +13,7 @@ int main(void)
 	float average;
 
 	// Initialization
-	grade = 0; 
+	grade = 0;
 	total = 0;
 	average= 0;
 	num_grades = 0;

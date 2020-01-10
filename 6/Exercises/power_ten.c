@@ -1,7 +1,8 @@
-/*
+/* gcc -o power_ten power_ten.c
+ *
  *  Prints the following table to the console:
  *
- *  N	10*N     100*N    1000*N
+ *  N   10*N     100*N    1000*N
  *  1    10       100      1000
  *  2   ...
  *  3
@@ -12,7 +13,7 @@
  *  8
  *  9
  *  10
- */  
+ */
 #include <stdio.h>
 
 int main(void)

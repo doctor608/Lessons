@@ -1,5 +1,7 @@
-/*
- * Prints if a number is a palindrome or not. 
+/* gcc -o palindrome palindrome.c
+ *
+ * Prints if a number is a palindrome or not.
+ *
  */
 #include <stdio.h>
 

@@ -1,5 +1,7 @@
-/*
- *Prompts user for five integers and draw a histogram.
+/* gcc -o histogram histogram.c
+ *
+ * Prompts user for five integers and draw a histogram.
+ *
  */
 #include <stdio.h>
 
@@ -18,7 +20,8 @@ int main(void)
 	if (a < 0 || a > MAX_WIDTH || b < 0 || b > MAX_WIDTH ||
 	    c < 0 || c > MAX_WIDTH || d < 0 || d > MAX_WIDTH ||
 	    e < 0 || e > MAX_WIDTH) {
-		fprintf(stderr, "Error: Integers must be in range (0..%d)\n", MAX_WIDTH);
+		fprintf(stderr, "Error: Integers must be in range (0..%d)\n",
+			MAX_WIDTH);
 		return 1;
 	}
 

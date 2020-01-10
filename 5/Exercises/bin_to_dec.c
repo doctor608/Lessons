@@ -1,5 +1,7 @@
-/*
+/* gcc -o bin_to_dec bin_to_dec.c
+ *
  * Converts binary numbers to decimal numbers.
+ *
  */
 #include <stdio.h>
 
@@ -20,7 +22,8 @@ int main(void)
 	while (bin_temp != 0) {
 		remainder = bin_temp % 10;
 		if (remainder != 0 && remainder != 1) {
-			fprintf(stderr, "Error: %d is not a binary number\n", bin_num);
+			fprintf(stderr, "Error: %d is not a binary number\n",
+				bin_num);
 			return 1;
 		}
 		bin_temp /= 10;
@@ -36,7 +39,7 @@ int main(void)
 		dec_num += bin_num % 10 * two_power;
 		two_power = 1;
 	}
-	
+
 	printf("%d\n", dec_num);
 
 	return 0;

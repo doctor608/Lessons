@@ -1,5 +1,7 @@
-/*
+/* gcc -o area area.c
+ *
  * Given a radius of the area, compute its diameter, perimeter and square.
+ *
  */
 #include <stdio.h>
 #include <float.h>
@@ -9,7 +11,7 @@
 int main(void)
 {
 	float radius;
-	
+
 	printf("Enter radius: ");
 	if (scanf("%f", &radius) != 1) {
 		fprintf(stderr, "Error: Expected a float value\n");

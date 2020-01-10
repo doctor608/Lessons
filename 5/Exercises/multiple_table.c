@@ -1,5 +1,7 @@
-/*
+/* gcc -o multiple_table multiple_table.c
+ *
  * Prints the multiple table
+ *
  */
 
 #include <stdio.h>

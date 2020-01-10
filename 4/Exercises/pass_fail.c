@@ -1,5 +1,7 @@
-/*
+/* gcc -o pass_fail pass_fail.c
+ *
  *  Prompts user for 10 test results and displays number of passes and failures.
+ *
  */
 #include <stdio.h>
 

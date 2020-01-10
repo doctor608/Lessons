@@ -1,5 +1,7 @@
-/*
+/* gcc -o min_max min_max.c
+ *
  * Calucaltes min, max and mean of three numbers.
+ *
  */
 #include <stdio.h>
 
@@ -9,7 +11,6 @@ int main(void)
 	printf("Enter 3 numbers: ");
 
 	if (scanf("%d %d %d", &a, &b, &c) != 3) {
-		// All bad
 		fprintf(stderr, "Error: expected 3 integer values\n");
 		return 1;
 	}
@@ -22,7 +23,6 @@ int main(void)
 	else
 		printf("%d\n", c);
 
-	
 	printf("Max is: ");
 	if (a >= b && a >= c)
 		printf("%d\n", a);

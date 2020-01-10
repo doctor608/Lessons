@@ -1,5 +1,7 @@
-/*
+/* gcc -o two_max two_max.c
+ *
  * Returns/Prints two max numbers entered.
+ *
  */
 #include <stdio.h>
 

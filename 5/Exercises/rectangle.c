@@ -1,7 +1,6 @@
-/*
- * Height: 5
- * Width:  10
- * Output: 
+/* gcc -o rectangle rectangle.c
+ *
+ * Prints the following:
  *
  *    * * * * * * * * * *
  *    * * * * * * * * * *
@@ -16,14 +15,14 @@
 int main(void)
 {
 	int height, width;
-	
+
 	printf("Enter height: ");
 	if (scanf("%d", &height) != 1) {
 		fprintf(stderr, ERROR_MESSAGE);
 		return 1;
 	}
 	printf("Enter width: ");
-	if (scanf("%d", &width) != 1) {
+	if (scanf("%d" &width) != 1) {
 		fprintf(stderr, ERROR_MESSAGE);
 		return 1;
 	}
@@ -34,7 +33,6 @@ int main(void)
 	}
 
 	for (int row = 0; row < height; ++row) {
-		// Draws one row
 		for (int star = 0; star < width; ++star) {
 			printf("* ");
 		}
