@@ -1,0 +1,19 @@
+'\n' - ?
+'\b'
+'\t'
+'\\'
+
+int 100
+    0x10
+    010
+double 100.2
+char 'y'
+string "Hello"
+
+int x, y; // x
+
+int x = 24; // x <- 24
+
+x = 24;
+
+y = 21;
