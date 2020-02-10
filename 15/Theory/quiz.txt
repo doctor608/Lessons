@@ -1,0 +1,29 @@
+1. What is a function prototype? Why do we need it?
+
+double median(double data[], int size)
+{
+}
+
+int maximum(int a, int b);
+
+int main()
+{
+        int x = 2, y = 5;
+        maximum(x, y);
+}
+
+2. What is a function return value?
+
+3. What is a function argument?
+
+4. What is a function parameter?
+
+5. What happens to function arguments when they are passed into function?
+
+6. What is a 'void' return type?
+
+7. Why do we need functions? What for?
+
+8. What is recursion? What do we need it for?
+
+
