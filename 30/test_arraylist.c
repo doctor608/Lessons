@@ -9,23 +9,12 @@ int main(void)
     ArrayList numbers;
     arraylist_init(&numbers, 10);
 
-    srand(time(NULL));
+    arraylist_print(&numbers);
 
-    for (int i = 0; i < 20; ++i) {
-        arraylist_push_back(&numbers, rand() % 101);
-    }
+    arraylist_reverse(&numbers);
 
-    for (int i = 0; i < arraylist_size(&numbers); ++i) {
-        printf("%d, ", arraylist_get(&numbers, i));
-    }
-    puts("\b\b");
+    arraylist_print(&numbers);
 
-    arraylist_sort(&numbers);
-
-    for (int i = 0; i < arraylist_size(&numbers); ++i) {
-        printf("%d, ", arraylist_get(&numbers, i));
-    }
-    puts("\b\b");
-
+    arraylist_del(&numbers);
     return 0;
 }

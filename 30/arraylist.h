@@ -10,8 +10,6 @@ typedef struct {
     int* buffer_ptr;
 } ArrayList;
 
-static void arraylist_check_index(ArrayList* al, int pos);
-
 void arraylist_init(ArrayList* al, size_t capacity);
 void arraylist_del(ArrayList* al);
 
@@ -26,6 +24,14 @@ bool arraylist_empty(const ArrayList* al);
 void arraylist_push_back(ArrayList* al, int val);
 int arraylist_pop_back(ArrayList* al);
 
-void arraylist_sort(ArrayList* al);
+void arraylist_sort(ArrayList* al, bool ascend);
+
+void arraylist_print(const ArrayList* al);
+
+void arraylist_clear(ArrayList* al);
+
+void arraylist_resize(ArrayList* al, int pos);
+
+void arraylist_reverse(ArrayList* al);
 
 #endif /* ARRAY_LIST_H */

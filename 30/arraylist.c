@@ -9,7 +9,7 @@
 #define ARRAYLIST_GROW_FACTOR 2
 
 static void arraylist_grow_buffer(ArrayList* al);
-static void arraylist_check_index(ArrayList* al, int pos);
+static void arraylist_check_index(const ArrayList* al, int pos);
 static void swap(int* a, int* b);
 
 void arraylist_init(ArrayList* al, size_t capacity)
@@ -75,21 +75,31 @@ int arraylist_pop_back(ArrayList* al)
     return al->buffer_ptr[al->size];
 }
 
-void arraylist_sort(ArrayList* al)
+void arraylist_sort(ArrayList* al, bool ascend)
 {
     if (al->size == 0 || al->size == 1)
-        return;
+            return;
 
-    for (int i = 0; i < al->size; ++i) {
-        int min_index = i;
-        for (int j = i + 1; j < al->size; ++j) {
-            if (al->buffer_ptr[j] < al->buffer_ptr[min_index])
-                min_index = j;
+    if (ascend) {
+        for (int i = 0; i < al->size; ++i) {
+            int min_index = i;
+            for (int j = i + 1; j < al->size; ++j) {
+                if (al->buffer_ptr[j] < al->buffer_ptr[min_index])
+                    min_index = j;
+            }
+            swap(al->buffer_ptr + i, al->buffer_ptr + min_index);
         }
-        swap(al->buffer_ptr + i, al->buffer_ptr + min_index);
+    } else {
+        for (int i = 0; i < al->size; ++i) {
+            int max_index = i;
+            for (int j = i + 1; j < al->size; ++j) {
+                if (al->buffer_ptr[j] > al->buffer_ptr[max_index])
+                    max_index = j;
+            }
+            swap(al->buffer_ptr + i, al->buffer_ptr + max_index);
+        }
     }
 }
-
 static void swap(int* a, int* b)
 {
     int temp = *a;
@@ -116,10 +126,31 @@ static void arraylist_grow_buffer(ArrayList* al)
     al->buffer_ptr = new_buffer_ptr;
 }
 
-static void arraylist_check_index(ArrayList* al, int pos)
+static void arraylist_check_index(const ArrayList* al, int pos)
 {
     if (pos < 0 || pos >= al->size) {
         fprintf(stderr, "arraylist_at: index out of bounds\n");
         exit(1);
+    }
+}
+
+void arraylist_print(const ArrayList* al)
+{
+    if (arraylist_empty(al)) {
+        puts("[]");
+        return;
+    }
+
+    printf("[");
+    for (int i = 0; i < arraylist_size(al); ++i) {
+        printf("%d, ", arraylist_get(al, i));
+    }
+    printf("\b\b]\n");
+}
+
+void arraylist_reverse(ArrayList* al)
+{
+    for (int i = 0; i < arraylist_size(al); ++i) {
+        swap(al->buffer_ptr + i, al->buffer_ptr + arraylist_size(al) - i);
     }
 }
